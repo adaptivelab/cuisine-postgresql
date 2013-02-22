@@ -2,8 +2,7 @@ try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
-from cuisine_postgresql import __version__, __maintainer__, __email__
-
+execfile('cuisine_postgresql/version.py')
 
 license_text = open('LICENSE.txt').read()
 long_description = open('README.rst').read()
@@ -27,7 +26,7 @@ setup(
     license = license_text,
     long_description=long_description,
     name = 'cuisine-postgresql',
-    py_modules = ['cuisine_postgresql'],
+    packages = ['cuisine_postgresql'],
     url = 'http://github.com/muhuk/cuisine-postgresql',
     version = __version__,
 )
